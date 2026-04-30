@@ -1,0 +1,209 @@
+/* Variables para mantener consistencia */
+:root {
+    --bg-color: #FAFAFA;
+    --text-main: #111111;
+    --text-muted: #555555;
+    --accent: #000000;
+    --white: #FFFFFF;
+    --font-main: 'Inter', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Tipografía --- */
+h1, h2, h3 { font-weight: 800; line-height: 1.2; }
+h2 { font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; }
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+    border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: var(--white);
+    color: var(--accent);
+    border-color: var(--white);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover { color: var(--accent); }
+
+/* --- Footer --- */
+.main-footer {
+    background-color: #111;
+    color: #FFF;
+    padding: 4rem 0 2rem 0;
+}
+
+/* Bloque Superior del Footer (Enlaces y Redes) */
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand p, .footer-contact p { color: #888; font-size: 0.9rem; margin-top: 1rem; }
+.footer-links ul { list-style: none; margin-top: 1rem; }
+.footer-links a { color: #888; transition: color 0.3s ease; }
+.footer-links a:hover { color: #FFF; }
+
+/* Iconos de Redes Sociales */
+.footer-social .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--white);
+}
+
+/* Línea Divisoria */
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 0 auto 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Bloque Inferior: Mapa y Dirección */
+.footer-location {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.map-container {
+    flex: 2;
+    min-width: 300px;
+}
+
+.address-container {
+    flex: 1;
+    min-width: 250px;
+}
+
+.address-container h4 {
+    margin-bottom: 1rem;
+    color: #FFF;
+}
+
+.address-container p {
+    color: #888;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Copyright y Privacidad */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+.privacy-link {
+    color: #888;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: var(--white);
+}
